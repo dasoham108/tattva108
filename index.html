@@ -3,64 +3,66 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Tattva 108</title>
-<meta name="description" content="Simple tools for a life of bhakti: Sankalpa and more, for the pleasure of Sri Guru and Gauranga.">
-<meta name="theme-color" content="#0b0716">
+<title>Tattva Apps</title>
+<meta name="description" content="Tattva Apps: Sankalpa for your daily vows, and Vāṇī for Śrīla Prabhupāda’s voice through the day.">
+<meta name="theme-color" content="#ffe3c2">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Fredoka:wght@500;600&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0b0716;--surface:rgba(30,21,54,.82);--line:#3b2c5e;--fg:#fff3dc;--muted:#b8a8d4;--lamp:#f6b73c;
---gold:linear-gradient(180deg,#fff2b8 0%,#ffd46b 35%,#f2a93b 70%,#c8741a 100%);--grad:linear-gradient(135deg,#ffe08a 0%,#f6b73c 45%,#e8801f 100%);color-scheme:dark}
+:root{--bg:#ffffff;--ink:#1f2328;--muted:#6b6f76;--line:#e6e7ea;--kumkum:#b3202a}
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--fg);font-family:"Quicksand",system-ui,sans-serif}
-body{min-height:100vh;background:radial-gradient(1200px 600px at 50% -10%,rgba(246,183,60,.16),transparent 60%),radial-gradient(800px 500px at 100% 100%,rgba(140,90,220,.14),transparent 60%),var(--bg)}
-.wrap{max-width:880px;margin:0 auto;padding:56px 16px 40px}
-header{text-align:center}
-.mark{width:72px;height:72px;margin:0 auto 14px;display:block;filter:drop-shadow(0 8px 24px rgba(246,183,60,.35))}
-h1{font-family:"Cinzel Decorative",serif;font-weight:900;font-size:clamp(34px,8vw,54px);margin:0;letter-spacing:.02em;background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent}
-.tag{margin:10px 0 0;color:var(--muted);font-size:17px;line-height:1.5}
-.tag b{color:var(--fg);font-weight:600}
-.rule{width:120px;height:2px;margin:22px auto 0;background:var(--grad);border-radius:2px;opacity:.8}
-.apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:40px}
-.app{display:flex;flex-direction:column;gap:8px;padding:20px;border-radius:18px;background:var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none;transition:transform .15s,border-color .15s;min-height:170px}
-a.app:hover,a.app:focus-visible{transform:translateY(-2px);border-color:rgba(246,183,60,.6);outline:none}
-.app .ic{font-size:30px;line-height:1}
-.app h2{font-family:"Fredoka",sans-serif;font-weight:600;font-size:22px;margin:4px 0 0}
-.app p{margin:0;color:var(--muted);line-height:1.45;font-size:15px;flex:1}
-.go{font-weight:700;color:var(--lamp);font-size:15px}
-.soon{opacity:.62}
-.soon .go{color:var(--muted);font-weight:600}
-footer{margin-top:44px;text-align:center;color:var(--muted);font-size:14px;line-height:1.7}
-footer a{color:var(--lamp);text-decoration:none}
-footer .dev{font-family:"Cinzel Decorative",serif;font-size:12px;letter-spacing:.08em;opacity:.8;margin-top:10px}
+html{background:#fff;overflow-x:hidden}
+body{overflow-x:hidden;margin:0;background:url(mandala.svg) center -150px/min(760px,125vw) no-repeat,linear-gradient(180deg,#ffe3c2 0%,#fff1e2 32%,#fffaf5 62%,#ffffff 100%) no-repeat;min-height:100vh;color:var(--ink);font:400 17px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid #2f6feb;outline-offset:4px;border-radius:12px}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{position:relative;padding:80px 0 56px;text-align:center;isolation:isolate}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--kumkum);margin:0 auto 14px}
+h1{margin:0;font:400 76px/1 "Tiro Devanagari Sanskrit",serif;letter-spacing:.01em}
+.latin{margin:12px 0 0;font-size:22px;font-weight:600;letter-spacing:-.01em}
+.sub{margin:6px 0 0;color:var(--muted)}
+.apps{display:grid;grid-template-columns:repeat(2,minmax(0,260px));justify-content:center;gap:56px;padding:8px 0 64px}
+.app{display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none}
+.app img{width:120px;height:120px;border-radius:27px;display:block;box-shadow:0 1px 2px rgba(31,35,40,.12),0 8px 24px rgba(31,35,40,.10)}
+.app h2{margin:18px 0 0;font-size:20px;font-weight:600;letter-spacing:-.01em}
+.app p{margin:6px 0 0;color:var(--muted);font-size:16px;max-width:22em}
+.app .open{margin-top:16px;padding:8px 20px;border-radius:999px;background:rgba(255,255,255,.8);box-shadow:0 0 0 1px #ead9c6;font-weight:600;font-size:15px;color:#b4530a}
+.app:hover .open{background:#fff}
+footer{border-top:1px solid #efe3d6;padding:22px 0 40px;text-align:center;color:var(--muted);font-size:14px}
+footer p{margin:4px 0}
+@media (max-width:560px){
+  header{padding:56px 0 40px}
+  h1{font-size:64px}
+  .apps{grid-template-columns:1fr;gap:44px}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header>
-<svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset=".55" stop-color="#f6b73c"/><stop offset="1" stop-color="#c8741a"/></linearGradient></defs><path d="M32 6c6 9 9 15 9 21a9 9 0 0 1-18 0c0-6 3-12 9-21z" fill="url(#g)"/><path d="M5 44c9-6 18-6 27 0 9-6 18-6 27 0-4.5 10.5-15 16-27 16S9.5 54.5 5 44z" fill="url(#g)" opacity=".9"/></svg>
-<h1>Tattva 108</h1>
-<p class="tag">Simple tools for a life of bhakti.<br><b>Firm in vow, sweet in service.</b></p>
-<div class="rule"></div>
+<div class="dot" aria-hidden="true"></div>
+<h1 lang="sa">तत्त्व</h1>
+<p class="latin">Tattva Apps</p>
+<p class="sub">Apps for daily sādhana, made by devotees.</p>
 </header>
 <main class="apps">
-<a class="app" href="https://sankalpa.tattva108.app/">
-<span class="ic" aria-hidden="true">🪔</span><h2>Sankalpa</h2>
-<p>Take your sankalpas for Kartik and beyond, tick them off each day, and grow together with your Bhakti Vriksha.</p>
-<span class="go">Open Sankalpa →</span></a>
-<div class="app soon" aria-disabled="true">
-<span class="ic" aria-hidden="true">📻</span><h2>Vani</h2>
-<p>Śrīla Prabhupāda's lectures and kīrtans, playing all day like a radio.</p>
-<span class="go">Coming soon</span></div>
-<div class="app soon" aria-disabled="true">
-<span class="ic" aria-hidden="true">📖</span><h2>Gita Quiz</h2>
-<p>Learn the Bhagavad-gītā together through friendly quiz games for families and groups.</p>
-<span class="go">Coming soon</span></div>
+<a class="app" href="https://dasoham108.github.io/">
+<img src="https://dasoham108.github.io/icon-192.png" alt="" width="120" height="120">
+<h2>Sankalpa</h2>
+<p>Take your vows for Kārtika and beyond, and tick them off each evening with your Bhakti Vṛkṣa.</p>
+<span class="open">Open</span>
+</a>
+<a class="app" href="https://vani.tattva108.app/">
+<img src="data:image/jpeg;base64,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" alt="" width="120" height="120">
+<h2>Vāṇī</h2>
+<p>Śrīla Prabhupāda’s lectures, morning walks and bhajans, playing through the day like a radio.</p>
+<span class="open">Listen</span>
+</a>
 </main>
 <footer>
-Questions or ideas? <a href="mailto:sankalpaadmin.108@gmail.com">sankalpaadmin.108@gmail.com</a>
-<div class="dev">For Sri Guru and Gauranga</div>
+<p>Questions? <a href="mailto:sankalpaadmin.108@gmail.com">sankalpaadmin.108@gmail.com</a></p>
+<p>For the pleasure of Śrī Guru and Gaurāṅga</p>
 </footer>
 </div>
 </body>
